@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic; // Для использования коллекций
+using System.Collections.Generic; 
 
 namespace Lab2
 {
@@ -73,12 +73,11 @@ namespace Lab2
             // 1. ДЕМОНСТРАЦИЯ НАСЛЕДОВАНИЯ
             Console.WriteLine("--- Наследование ---");
             
-            // Создаем объекты разных классов
-            Animal genericAnimal = new Animal("Животное", 5);
-            Dog dog = new Dog("Бобик", 3, "Такса");
-            Cat cat = new Cat("Мурка", 2, true);
+            Animal genericAnimal = new Animal(name: "Животное", age: 5);
+            Dog dog = new Dog(name: "Бобик", age: 3, breed: "Такса");
+            Cat cat = new Cat(name: "Мурка", age: 2, isLazy: true);
 
-            // Помещаем их в массив базового типа (полиморфизм)
+            // Полиморфизм
             Animal[] animals = { genericAnimal, dog, cat };
 
             foreach (var animal in animals)
@@ -90,16 +89,13 @@ namespace Lab2
 
             // 2. ДЕМОНСТРАЦИЯ КОЛЛЕКЦИИ
             Console.WriteLine("--- Коллекция List<T> ---");
-            
-            // Создаем коллекцию животных
+        
             List<Animal> animalList = new List<Animal>();
-            
-            // Добавляем элементы
-            animalList.Add(new Dog("Рекс", 4, "Овчарка"));
-            animalList.Add(new Cat("Барсик", 1, false));
-            animalList.Add(new Dog("Шарик", 5, "Дворняга"));
-            
-            // Перебираем коллекцию
+        
+            animalList.Add(new Dog(name: "Рекс", age: 4, breed: "Овчарка"));
+            animalList.Add(new Cat(name: "Барсик", age: 1, isLazy: false));
+            animalList.Add(new Dog(name: "Шарик", age: 5, breed: "Дворняга"));
+           
             foreach (var animal in animalList)
             {
                 Console.Write($"{animal.Name}: ");
@@ -108,7 +104,6 @@ namespace Lab2
             
             Console.WriteLine($"\nВсего животных в коллекции: {animalList.Count}");
             
-            // Доступ по индексу
             Console.WriteLine($"Первое животное: {animalList[0].Name}");
 
             // 3. ДЕМОНСТРАЦИЯ ОБРАБОТКИ ИСКЛЮЧЕНИЙ
