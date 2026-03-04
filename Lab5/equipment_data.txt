@@ -1,0 +1,13 @@
+# Параметры оборудования (пример)
+# Имя параметра = Значение
+
+Temperature = 75.5
+Pressure = 1.2
+Voltage = 220.0
+Current = 5.3
+Power = 1166.0
+Frequency = 50.0
+Humidity = 45.2
+Speed = 1500
+Status = Running
+Mode = Automatic
