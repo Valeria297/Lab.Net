@@ -18,7 +18,7 @@
  cd Lab1  
  dotnet run  
  Либо укажите проект из корня:  
- dotnet run --project Lab1  
+ cd ~/c#_projects/Lab/Lab1 && dotnet run
 
 Все проекты написаны на C# и используют .NET.  
 Для запуска необходимо установить .NET SDK.  
